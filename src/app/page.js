@@ -1,9 +1,10 @@
 import Image from "next/image";
+import Navbar from "./components/Navbar";
 
 export default function Home() {
   return (
-    <div>
-      <p className=" bg-slate-500">This is the page</p>
-    </div>
+        <div className="bg-slate-600 h-[100vh] w-full">
+            <Navbar/>
+        </div>
   );
 }
