@@ -1,0 +1,42 @@
+{
+  "_format": "hh-sol-cache-2",
+  "files": {
+    "C:\\Users\\Jeet Chandak\\OneDrive\\Desktop\\WEB3\\HackaThon\\block-fundings\\contracts\\Campaign.sol": {
+      "lastModificationDate": 1725012495993,
+      "contentHash": "f953e9f6da3f3816e2d1883f5b048fcd",
+      "sourceName": "contracts/Campaign.sol",
+      "solcConfig": {
+        "version": "0.8.24",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">0.7.0 <=0.9.0"
+      ],
+      "artifacts": [
+        "Campaign",
+        "CampaignFactory"
+      ]
+    }
+  }
+}
