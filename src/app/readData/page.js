@@ -1,5 +1,4 @@
-
-  "use client";
+"use client";
 
 import React, { useEffect, useState } from 'react';
 import { ethers } from 'ethers';
@@ -64,20 +63,17 @@ export default function CampaignList() {
   }, []);
 
   return (
-    <div className="h-[80vh] scroll-smooth  overflow-y-auto p-4">
-       {campaigns.map(card => (
+    <div className="h-[80vh] scroll-smooth overflow-y-auto p-4">
+      {campaigns.map(campaign => (
         <Card
-          key={card.id}
-          image={card.image}
-          title={card.title}
-          description={card.description}
-          fundLink={card.fundLink}
-          statsLink={card.statsLink}
+          key={campaign.id}
+          image={campaign.image}
+          title={campaign.title}
+          description={campaign.description}
+          fundLink={campaign.fundLink}
+          statsLink={campaign.statsLink}
         />
       ))}
     </div>
-
-      
-
   );
 }
