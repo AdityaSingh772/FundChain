@@ -1,5 +1,5 @@
 
-  "use client";
+"use client";
 
 import React, { useEffect, useState } from 'react';
 import { ethers } from 'ethers';
@@ -22,22 +22,22 @@ export default function CampaignList() {
 
       const campaignFactory = new ethers.Contract(campaignFactoryAddress, campaignFactoryABI, signer);
 
-      // Fetch the deployed campaign addresses
+      
       const deployedCampaigns = await campaignFactory.getDeployedCampaigns();
 
-      // Fetch details for each deployed campaign using ABI
+      
       const campaignDetails = await Promise.all(
         deployedCampaigns.map(async (address) => {
-          // Instantiate each Campaign contract using the correct ABI
+          
           const campaign = new ethers.Contract(address, campaignABI, signer);
           
           try {
-            // Fetch the details from the Campaign contract
-            const title = await campaign.title(); // Fetching public state variable 'title'
-            const image = await campaign.image(); // Fetching public state variable 'image'
-            const requiredAmount = await campaign.requiredAmount(); // Fetching public state variable 'requiredAmount'
-            const receivedAmount = await campaign.receivedAmount(); // Fetching public state variable 'receivedAmount'
-            const story = await campaign.story(); // Fetching public state variable 'story'
+            
+            const title = await campaign.title();
+            const image = await campaign.image(); 
+            const requiredAmount = await campaign.requiredAmount(); 
+            const receivedAmount = await campaign.receivedAmount(); 
+            const story = await campaign.story(); 
 
             return {
               id: address,
@@ -51,12 +51,12 @@ export default function CampaignList() {
             };
           } catch (error) {
             console.error(`Error fetching details for campaign at ${address}:`, error);
-            return null; // Handle or skip campaigns with errors
+            return null; 
           }
         })
       );
 
-      // Filter out any null entries from campaigns with errors
+
       setCampaigns(campaignDetails.filter(campaign => campaign !== null));
     }
 

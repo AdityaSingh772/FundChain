@@ -117,6 +117,7 @@ export default function Navbar() {
       
     console.log("Form submitted");
     setIsFormVisible(false);
+
    
 
 
