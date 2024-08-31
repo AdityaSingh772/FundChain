@@ -1,13 +1,14 @@
-// components/Card.js
+"use client";
+
 import React from 'react';
 
-export default function Card({ image, title, description, fundLink, statsLink }) {
+export default function Card({ image, title, description, statsLink, onFundClick }) {
   return (
-    <div className="w-[60vw] h-[20vh] bg-b2 shadow-lg rounded-lg overflow-hidden flex flex-col my-7">
+    <div className="w-[60vw] h-[40vh] bg-b1 shadow-lg rounded-lg text-b1 overflow-hidden flex flex-col my-7">
       {/* Card Content */}
       <div className="flex flex-grow">
         {/* Image Section */}
-        <div className="w-[13vw] h-[20vh] bg-gray-200 flex-shrink-0">
+        <div className="w-[20vw] h-[40vh] bg-gray-200 flex-shrink-0">
           <img
             src={image}
             alt="Card Image"
@@ -27,10 +28,13 @@ export default function Card({ image, title, description, fundLink, statsLink })
 
           {/* Buttons */}
           <div className="flex space-x-4">
-            <a href={fundLink} className="bg-b1 text-white px-4 py-2 rounded-md hover:bg-blue-600" target="_blank" rel="noopener noreferrer">
+            <button 
+              onClick={onFundClick} 
+              className="bg-b1 text-white px-4 py-2 rounded-md hover:bg-b3"
+            >
               Fund
-            </a>
-            <a href={statsLink} className="bg-b1 text-white px-4 py-2 rounded-md hover:bg-green-600" target="_blank" rel="noopener noreferrer">
+            </button>
+            <a href={statsLink} className="bg-b1 text-white px-4 py-2 rounded-md hover:bg-b3" target="_blank" rel="noopener noreferrer">
               See Statistics
             </a>
           </div>
