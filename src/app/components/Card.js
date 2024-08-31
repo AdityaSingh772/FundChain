@@ -3,7 +3,7 @@ import React from 'react';
 
 export default function Card({ image, title, description, fundLink, statsLink }) {
   return (
-    <div className="w-[60vw] h-[20vh] bg-b2 shadow-lg rounded-lg overflow-hidden flex flex-col my-7">
+    <div className="w-[60vw] h-[20vh] bg-b1 shadow-lg rounded-lg text-b1 overflow-hidden flex flex-col my-7">
       {/* Card Content */}
       <div className="flex flex-grow">
         {/* Image Section */}

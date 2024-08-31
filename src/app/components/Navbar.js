@@ -62,10 +62,10 @@ export default function Navbar() {
 
   return (
     <div>
-      <header className={`bg-b2 shadow-md py-4 px-8 font-roboto ${isFormVisible ? "blur-sm" : ""}`}> {/* Highlighted line */}
+      <header className={`bg-b2 shadow-md py-4 text-b1 px-8 font-roboto ${isFormVisible ? "blur-sm" : ""}`}> {/* Highlighted line */}
         <div className="container mx-auto flex justify-between items-center">
           {/* Title */}
-          <div className="text-2xl font-bold text-white">
+          <div className="text-2xl font-bold text-b2">
             <Link href="/">Fund raise</Link>
           </div>
 

@@ -1,4 +1,6 @@
-// components/CampaignList.js
+"use client"
+
+
 import React from 'react';
 import Card from './Card'; 
 
@@ -70,7 +72,7 @@ export default function CampaignList() {
       ))}
     </div>
 
-      
+
 
   );
 }
