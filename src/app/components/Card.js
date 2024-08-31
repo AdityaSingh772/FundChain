@@ -30,11 +30,11 @@ export default function Card({ image, title, description, statsLink, onFundClick
           <div className="flex space-x-4">
             <button 
               onClick={onFundClick} 
-              className="bg-b1 text-white px-4 py-2  border-2 border-white rounded-md hover:bg-b3"
+              className="bg-b1 text-slate-800 px-4 py-2  border-2 border-white rounded-md hover:bg-b3"
             >
               Fund
             </button>
-            <a href={statsLink} className="bg-b1 text-white px-4 py-2 rounded-md border-2 border-white hover:bg-b3" target="_blank" rel="noopener noreferrer">
+            <a href={statsLink} className="bg-b1 text-slate-800 px-4 py-2 rounded-md border-2 border-white hover:bg-b3" target="_blank" rel="noopener noreferrer">
               See Statistics
             </a>
           </div>
