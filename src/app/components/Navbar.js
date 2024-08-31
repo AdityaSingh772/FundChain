@@ -111,35 +111,25 @@ export default function Navbar() {
     catch(error) {
       console.log("Error creating campaign:", error);
       alert("Failed to create campaign");
-    }
-
-
-      
+    }   
     console.log("Form submitted");
     setIsFormVisible(false);
-
-   
-
-
   };
-
-
-
   return (
     <div>
-      <header className={`bg-b2 shadow-md py-4 px-8 font-roboto ${isFormVisible ? "blur-sm" : ""}`}> {/* Highlighted line */}
+      <header className={`bg-b2 shadow-md py-4 text-black px-8 font-roboto ${isFormVisible ? "blur-sm" : ""}`}> {/* Highlighted line */}
         <div className="container mx-auto flex justify-between items-center">
           {/* Title */}
-          <div className="text-2xl font-bold text-white">
-            <Link href="/">Fund raise</Link>
+          <div className="text-2xl font-bold text-black">
+            <Link href="/">Fund Chain</Link>
           </div>
 
           {/* Buttons */}
           <div className="flex items-center space-x-4">
-            <button onClick={() => setIsFormVisible(true)} className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">
+            <button onClick={() => setIsFormVisible(true)} className="bg-b1 text-black px-4 py-2 rounded-md hover:bg-b4">
               Create Campaign
             </button>
-            <div onClick={connectWallet} className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 cursor-pointer">
+            <div onClick={connectWallet} className="bg-b1 text-black px-4 py-2 rounded-md hover:bg-b4 cursor-pointer">
               {balance.slice(0, 5)}MATIC {address.slice(0, 7)}...{address.slice(39)}
             </div>
           </div>

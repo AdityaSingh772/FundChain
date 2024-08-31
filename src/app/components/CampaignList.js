@@ -7,7 +7,7 @@ import Card from '../components/Card';
 import { campaignFactoryABI, campaignFactoryAddress } from "../interact/config";
 import { campaignABI } from '../interact/config2';
 
-export default function CampaignList() {
+export default function CampaignList({ onFundClick }) {
   const [campaigns, setCampaigns] = useState([]);
 
   useEffect(() => {
@@ -45,7 +45,7 @@ export default function CampaignList() {
               title: title,
               description: story,
               fundLink: `/fund/${address}`,
-              statsLink: `/stats/${address}`,
+              statsLink: "https://rent-karo.vercel.app/about",
               requiredAmount: ethers.utils.formatEther(requiredAmount), 
               receivedAmount: ethers.utils.formatEther(receivedAmount), 
             };
@@ -61,23 +61,17 @@ export default function CampaignList() {
     }
 
     fetchCampaigns();
-  }, []);
+  });
 
   return (
-    <div className="h-[80vh] scroll-smooth  overflow-y-auto p-4">
-       {campaigns.map(card => (
+    <div className="flex flex-wrap justify-center">
+      {campaigns.reverse().map(card => (
         <Card
           key={card.id}
-          image={card.image}
-          title={card.title}
-          description={card.description}
-          fundLink={card.fundLink}
-          statsLink={card.statsLink}
+          {...card}
+          onFundClick={() => onFundClick(card)} // Pass the click handler
         />
       ))}
     </div>
-
-      
-
   );
 }
