@@ -22,10 +22,6 @@ export default function Navbar() {
   const [address, setAddress] = useState("Connect Wallet");
   const [balance, setBalance] = useState("-");
 
-  const handleForm = () => {
-    // Your form handling logic here
-  };
-
   const connectWallet = async () => {
     await window.ethereum.request({ method: "eth_requestAccounts" });
     const provider = new ethers.providers.Web3Provider(window.ethereum, "any");
@@ -61,7 +57,7 @@ export default function Navbar() {
       <div className="container mx-auto flex justify-between items-center">
         {/* Title */}
         <div className="text-2xl font-bold text-white">
-          <Link href="/">Fund raise</Link>
+          <Link href="/">FundChain</Link>
         </div>
 
         {/* Buttons */}
@@ -69,9 +65,9 @@ export default function Navbar() {
           <Link href="/create" className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">
             Create Campaign
           </Link>
-          <div onClick={connectWallet} className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">
+          <button onClick={connectWallet} className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">
             {balance.slice(0, 5)}MATIC {address.slice(0, 7)}...{address.slice(39)}
-          </div>
+          </button>
         </div>
       </div>
     </header>
