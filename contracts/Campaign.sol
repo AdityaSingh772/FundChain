@@ -39,7 +39,7 @@ contract CampaignFactory {
             imgUrl,
             block.timestamp,
             category
-        ); // Added missing semicolon
+        ); 
     }
 
     function getDeployedCampaigns() public view returns (address[] memory) {
