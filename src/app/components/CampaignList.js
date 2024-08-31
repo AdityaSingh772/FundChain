@@ -44,7 +44,7 @@ export default function CampaignList({ onFundClick }) {
               title: title,
               description: story,
               fundLink: `/fund/${address}`,
-              statsLink: `/stats/${address}`,
+              statsLink: "https://rent-karo.vercel.app/about",
               requiredAmount: ethers.utils.formatEther(requiredAmount), 
               receivedAmount: ethers.utils.formatEther(receivedAmount), 
             };
@@ -60,11 +60,11 @@ export default function CampaignList({ onFundClick }) {
     }
 
     fetchCampaigns();
-  }, []);
+  });
 
   return (
     <div className="flex flex-wrap justify-center">
-      {campaigns.map(card => (
+      {campaigns.reverse().map(card => (
         <Card
           key={card.id}
           {...card}
