@@ -126,6 +126,9 @@ export default function Navbar() {
 
           {/* Buttons */}
           <div className="flex items-center space-x-4">
+            <Link href="/about" className="bg-b1 text-black px-4 py-2 rounded-md hover:bg-b4">
+                About Us
+                    </Link>
             <button onClick={() => setIsFormVisible(true)} className="bg-b1 text-black px-4 py-2 rounded-md hover:bg-b4">
               Create Campaign
             </button>
@@ -211,6 +214,7 @@ export default function Navbar() {
 
 
               <div className="flex items-center justify-between">
+                   
                 <button  className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
                   Submit
                 </button>
