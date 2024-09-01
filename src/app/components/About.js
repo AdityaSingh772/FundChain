@@ -3,7 +3,7 @@ import React from 'react';
 
 export default function About() {
   return (
-    <div className="h-[190vh] w-[100vw] flex flex-col items-center">
+    <div className="h-[190vh] w-[100vw] flex flex-col font-roboto items-center">
       {/* Image and text container */}
       <div className="h-[90vh] w-full flex">
         {/* Image container */}
