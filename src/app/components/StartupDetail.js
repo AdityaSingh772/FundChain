@@ -6,9 +6,9 @@ export default function StartupDetail({ cardData, onClose }) {
   const { image, title, description } = cardData;
 
   return (
-    <div className="relative w-[80vw] h-[60vh] bg-white shadow-lg rounded-lg overflow-hidden flex flex-col items-center justify-center mx-auto">
+    <div className="relative w-[80vw] h-[80vh] bg-gray-100  shadow-lg rounded-lg overflow-hidden flex flex-col items-center justify-center mx-auto">
       {/* Image Section */}
-      <div className="w-[30vw] h-[30vh] bg-gray-200 mb-4">
+      <div className="w-[40vw] h-[40vh] bg-gray-200 mb-4">
         <img src={image} alt="Startup Image" className="w-full h-full object-cover" />
       </div>
 
