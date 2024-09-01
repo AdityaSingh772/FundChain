@@ -111,28 +111,38 @@ export default function Navbar() {
     catch(error) {
       console.log("Error creating campaign:", error);
       alert("Failed to create campaign");
-    }   
+    }
+
+
+      
     console.log("Form submitted");
     setIsFormVisible(false);
+
+   
+
+
   };
+
+
+
   return (
     <div>
-      <header className={`bg-b2 shadow-md py-4 text-black px-8 font-roboto ${isFormVisible ? "blur-sm" : ""}`}> {/* Highlighted line */}
+      <header className={`bg-b2 text-black shadow-md py-4 px-8 font-roboto ${isFormVisible ? "blur-sm" : ""}`}> {/* Highlighted line */}
         <div className="container mx-auto flex justify-between items-center">
           {/* Title */}
-          <div className="text-2xl font-bold text-black">
-            <Link href="/">Fund Chain</Link>
+          <div className="text-3xl font-bold text-gray-800">
+            <Link href="/">Fund raise</Link>
           </div>
 
           {/* Buttons */}
           <div className="flex items-center space-x-4">
-            <Link href="/about" className="bg-b1 text-black px-4 py-2 rounded-md hover:bg-b4">
-                About Us
-                    </Link>
-            <button onClick={() => setIsFormVisible(true)} className="bg-b1 text-black px-4 py-2 rounded-md hover:bg-b4">
+            <Link href="/about" className="bg-b1  px-4 py-2 rounded-md hover:bg-b3">
+                    About 
+            </Link>
+            <button onClick={() => setIsFormVisible(true)} className="bg-b1  px-4 py-2 rounded-md hover:bg-b3">
               Create Campaign
             </button>
-            <div onClick={connectWallet} className="bg-b1 text-black px-4 py-2 rounded-md hover:bg-b4 cursor-pointer">
+            <div onClick={connectWallet} className="bg-b1  px-4 py-2 rounded-md hover:bg-b3 cursor-pointer">
               {balance.slice(0, 5)}MATIC {address.slice(0, 7)}...{address.slice(39)}
             </div>
           </div>
@@ -214,11 +224,10 @@ export default function Navbar() {
 
 
               <div className="flex items-center justify-between">
-                   
-                <button  className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
+                <button  className="bg-b1 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
                   Submit
                 </button>
-                <button onClick={() => setIsFormVisible(false)} className="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800">
+                <button onClick={() => setIsFormVisible(false)} className="inline-block align-baseline font-bold text-sm text-b1 hover:text-blue-800">
                   Cancel
                 </button>
               </div>
